@@ -25,6 +25,9 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: GestureDetector(
         onTap: () {
@@ -33,27 +36,37 @@ class MainScreen extends StatelessWidget {
             MaterialPageRoute(builder: (context) => HomeModule()),
           );
         },
-        child: DecoratedBox(
+        child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/HomeModule/bgday.png"),
               fit: BoxFit.cover,
             ),
           ),
-          child: Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min, // Keeps the column centered
-              children: [
-                Image.asset(
+          child: Stack(
+            children: [
+              Center(
+                child: Image.asset(
                   "assets/HomeModule/logo.png",
-                  scale: 12,
+                  height: screenHeight * .5,
                 ),
-                const SizedBox(
-                    height: 15), // Adds spacing between image and text
-                const Text("Tap anywhere",
-                    style: TextStyle(fontSize: 18, color: Colors.white)),
-              ],
-            ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      bottom: screenHeight * 0.05), // Adjust for spacing
+                  child: Text(
+                    "Tap anywhere",
+                    style: TextStyle(
+                      fontSize: screenHeight * .03,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -151,7 +164,7 @@ class _HomeModuleState extends State<HomeModule> {
                     children: [
                       // Header
                       Container(
-                        height: 80,
+                        height: screenHeight * .2,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -159,13 +172,13 @@ class _HomeModuleState extends State<HomeModule> {
                               padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
                               child: Image.asset(
                                 "assets/mainModule/logo.png",
-                                height: 80,
+                                height: screenHeight * .2,
                               ),
                             ),
                             const SizedBox(width: 150),
                             Image.asset(
                               "assets/mainModule/name.png",
-                              height: 40,
+                              height: screenHeight * .09,
                             ),
                             const SizedBox(width: 50),
                             Stack(
@@ -173,15 +186,15 @@ class _HomeModuleState extends State<HomeModule> {
                               children: [
                                 Image.asset(
                                   "assets/mainModule/levelbg.png",
-                                  width: 150,
-                                  height: 150,
+                                  width: screenWidth * .17,
+                                  height: screenWidth * .2,
                                 ),
                                 Text(
                                   "Level $level",
                                   // Replace with dynamic level if needed
                                   style: TextStyle(
                                     fontFamily: "IrishGrover",
-                                    fontSize: 30,
+                                    fontSize: screenHeight * .065,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
                                   ),
@@ -195,7 +208,7 @@ class _HomeModuleState extends State<HomeModule> {
                       // Buttons Section
                       Container(
                         alignment: Alignment.center,
-                        height: 222,
+                        height: screenHeight * .59,
                         child: Column(
                           children: [
                             Row(
@@ -224,14 +237,14 @@ class _HomeModuleState extends State<HomeModule> {
               Expanded(
                 flex: 1,
                 child: Container(
-                  height: 250,
+                  height: screenHeight * .5,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 5),
-                      _settings("assets/mainModule/settingbtn.png"),
-                      const SizedBox(height: 10),
-                      _settings("assets/mainModule/stickerbtn.png"),
+                      SizedBox(height: screenHeight * .02),
+                      _settings(context, "assets/mainModule/settingbtn.png"),
+                      SizedBox(height: screenHeight * .02),
+                      _sticker(context, "assets/mainModule/stickerbtn.png"),
                     ],
                   ),
                 ),
@@ -248,7 +261,7 @@ class _HomeModuleState extends State<HomeModule> {
                 Text(
                   "Level 1 - 10",
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: screenHeight * .03,
                       fontFamily: "BebasNeue",
                       fontWeight: FontWeight.bold),
                 ),
@@ -256,7 +269,7 @@ class _HomeModuleState extends State<HomeModule> {
                 Text(
                   "Level 11 - 20",
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: screenHeight * .03,
                       fontFamily: "BebasNeue",
                       fontWeight: FontWeight.bold),
                 ),
@@ -265,63 +278,21 @@ class _HomeModuleState extends State<HomeModule> {
             Container(
               padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
               width: double.infinity,
-              height: 55,
+              height: screenHeight * .15,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          level--;
-                        });
-                      },
-                      child: Ink(
-                        width: 210,
-                        height: 100,
-                        child: Image.asset("assets/mainModule/tracingbtn.png"),
-                      ),
-                    ),
-                  ),
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          level++;
-                        });
-                      },
-                      child: Ink(
-                        width: 210,
-                        height: 110,
-                        child: Image.asset("assets/mainModule/matchbtn.png"),
-                      ),
-                    ),
-                  ),
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () => handleMathTap(context),
-                      child: Ink(
-                        width: 210,
-                        height: 110,
-                        child: Image.asset("assets/mainModule/math2.png"),
-                      ),
-                    ),
-                  ),
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () => handleSpellingTap(context),
-                      child: Ink(
-                        width: 210,
-                        height: 110,
-                        child: Image.asset("assets/mainModule/spelling2.png"),
-                      ),
-                    ),
-                  ),
+                  _gamebuttons(context, "assets/mainModule/tracingbtn.png",
+                      TracingPage()),
+                  _gamebuttons(context, "assets/mainModule/matchbtn.png",
+                      MatchingPage()),
+                  _gamebuttonslevel(
+                      context, "assets/mainModule/math2.png", MathPage(),
+                      onTap: () => handleMathTap(context)),
+                  _gamebuttonslevel(context, "assets/mainModule/spelling2.png",
+                      SpellingPage(),
+                      onTap: () => handleSpellingTap(context)),
                 ],
               ),
             ),
@@ -332,36 +303,144 @@ class _HomeModuleState extends State<HomeModule> {
   }
 
 // Helper Function for Buttons
+
   Widget _buildButton(String assetPath) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return Material(
       color: Colors.transparent,
       child: InkWell(
         onTap: () {},
-        child: Ink(
-          width: 210,
-          height: 110,
-          child: Image.asset(assetPath),
+        child: Container(
+          child: Ink(
+            width: screenWidth * 0.35,
+            height: screenHeight * 0.27,
+            child: ClipRRect(
+              borderRadius:
+                  BorderRadius.circular(10), // Clip image to match border
+              child: Image.asset(assetPath, fit: BoxFit.contain),
+            ),
+          ),
         ),
       ),
     );
   }
 }
 
-Widget _settings(String assetPath) {
-  return Material(
-    color: Colors.transparent,
-    child: InkWell(
-      onTap: () {},
-      child: Ink(
-        width: 180,
-        height: 80,
-        child: Image.asset(assetPath),
-      ),
+Widget _sticker(BuildContext context, String assetPath) {
+  double screenWidth = MediaQuery.of(context).size.width;
+  double screenHeight = MediaQuery.of(context).size.height;
+  return InkWell(
+    onTap: () {},
+    child: Container(
+      width: screenWidth * 0.1, // Adjust width dynamically
+      height: screenHeight * 0.2,
+      child: Image.asset(assetPath, fit: BoxFit.contain),
+    ),
+  );
+}
+
+Widget _settings(BuildContext context, String assetPath) {
+  double screenWidth = MediaQuery.of(context).size.width;
+  double screenHeight = MediaQuery.of(context).size.height;
+  return InkWell(
+    onTap: () => showSettingsPopup(context),
+    child: Container(
+      width: screenWidth * 0.08, // Adjust width dynamically
+      height: screenHeight * 0.15,
+      child: Image.asset(assetPath, fit: BoxFit.contain),
+    ),
+  );
+}
+
+void showSettingsPopup(BuildContext context) {
+  double screenWidth = MediaQuery.of(context).size.width;
+  double screenHeight = MediaQuery.of(context).size.height;
+
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return Dialog(
+        insetPadding: EdgeInsets.zero, // Removes default padding
+        backgroundColor: Colors.transparent, // Makes the background transparent
+        child: Container(
+          width: screenWidth * .5, // Full width
+          height: screenHeight * .9, // Full height
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/mainModule/settingPop.png"),
+              fit: BoxFit.contain, // Covers the entire screen
+            ),
+          ),
+        ),
+      );
+    },
+  );
+}
+
+Widget _gamebuttons(BuildContext context, String assetPath, Widget targetPage) {
+  double screenWidth = MediaQuery.of(context).size.width;
+  double screenHeight = MediaQuery.of(context).size.height;
+
+  return InkWell(
+    onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => targetPage),
+      );
+    },
+    child: Container(
+      width: screenWidth * 0.24, // Adjust width dynamically
+      height: screenHeight * 15,
+      child: Image.asset(assetPath, fit: BoxFit.contain),
+    ),
+  );
+}
+
+Widget _gamebuttonslevel(
+    BuildContext context, String assetPath, Widget targetPage,
+    {VoidCallback? onTap}) {
+  double screenWidth = MediaQuery.of(context).size.width;
+  double screenHeight = MediaQuery.of(context).size.height;
+
+  return InkWell(
+    onTap: onTap ??
+        () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => targetPage),
+          );
+        },
+    child: Container(
+      width: screenWidth * 0.24, // Adjust width dynamically
+      height: screenHeight * 15,
+      child: Image.asset(assetPath, fit: BoxFit.contain),
     ),
   );
 }
 
 // Dummy Spelling Page
+class TracingPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Math Page")),
+      body: Center(child: Text("Welcome to the Math Page!")),
+    );
+  }
+}
+
+class MatchingPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Math Page")),
+      body: Center(child: Text("Welcome to the Math Page!")),
+    );
+  }
+}
+
 class SpellingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
