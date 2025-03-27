@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  audioplayers: ^5.2.1  # Check for latest version
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -62,6 +63,8 @@ flutter:
      - assets/HomeModule/bgday.png
      - assets/HomeModule/logo.png
      - assets/mainModule/
+     - assets/modules/letters/
+     - assets/sounds/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -82,7 +85,9 @@ flutter:
      - family: BebasNeue
        fonts:
          - asset: assets/fonts/BebasNeue-Regular.ttf
-
+     - family: Inter
+       fonts:
+         - asset: assets/fonts/Inter_24pt-Bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

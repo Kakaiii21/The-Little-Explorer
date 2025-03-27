@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:littleexplorer/modules/colors.dart';
+import 'package:littleexplorer/modules/letters.dart';
+import 'package:littleexplorer/modules/numbers.dart';
+import 'package:littleexplorer/modules/shapes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -214,15 +218,19 @@ class _HomeModuleState extends State<HomeModule> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                _buildButton("assets/mainModule/letterbtn.png"),
-                                _buildButton("assets/mainModule/colorbtn.png"),
+                                _buildButton("assets/mainModule/letterbtn.png",
+                                    LettersModule()),
+                                _buildButton("assets/mainModule/colorbtn.png",
+                                    ColorsModule()),
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                _buildButton("assets/mainModule/shapebtn.png"),
-                                _buildButton("assets/mainModule/numberbtn.png"),
+                                _buildButton("assets/mainModule/shapebtn.png",
+                                    ShapesModule()),
+                                _buildButton("assets/mainModule/numberbtn.png",
+                                    NumbersModule()),
                               ],
                             ),
                           ],
@@ -304,14 +312,19 @@ class _HomeModuleState extends State<HomeModule> {
 
 // Helper Function for Buttons
 
-  Widget _buildButton(String assetPath) {
+  Widget _buildButton(String assetPath, Widget targetPage) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Material(
       color: Colors.transparent,
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => targetPage),
+          );
+        },
         child: Container(
           child: Ink(
             width: screenWidth * 0.35,
@@ -366,13 +379,14 @@ void showSettingsPopup(BuildContext context) {
         backgroundColor: Colors.transparent, // Makes the background transparent
         child: Container(
           width: screenWidth * .5, // Full width
-          height: screenHeight * .9, // Full height
+          height: screenHeight * .8, // Full height
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/mainModule/settingPop.png"),
-              fit: BoxFit.contain, // Covers the entire screen
+              fit: BoxFit.contain,
             ),
           ),
+          child: Text(""),
         ),
       );
     },
