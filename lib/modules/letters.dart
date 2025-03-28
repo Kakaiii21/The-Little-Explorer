@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:littleexplorer/main.dart';
 
 class LettersModule extends StatefulWidget {
   const LettersModule({super.key});
@@ -82,9 +83,9 @@ class _LettersModuleState extends State<LettersModule> {
       "🌰 ACORN",
       "⏰ ALARM",
       "👼 ANGEL",
-      "🧑‍🚀 ASTRONAUT",
+      "😠 ANGER",
       "🦶 ANKLE",
-      "🚑 AMBULANCE",
+      "🛡️ ARMOR",
       "📔 ALBUM",
       "🎭 ACTOR",
       "🤸 ACROBAT",
@@ -134,14 +135,15 @@ class _LettersModuleState extends State<LettersModule> {
       "🥥 COCONUT",
       "🐥 CHICK",
       "📷 CAMERA",
-      "🐛 CATERPILLAR",
+      "🎪 CIRCUS",
       "🍒 CHERRY",
-      "⭕ CIRCLE"
+      "⭕ CIRCLE",
     ],
     "Dd": [
       "🐶 DOG",
       "🦆 DUCK",
       "🦖 DINOSAUR",
+      "🦌 DEER",
       "🪆 DOLL",
       "🥁 DRUM",
       "🚪 DOOR",
@@ -169,6 +171,7 @@ class _LettersModuleState extends State<LettersModule> {
       "🍆 EGGPLANT",
       "🐘 ELEPHANT",
       "🧝 ELF",
+      "💡 ELECTRIC",
       "💪 ELBOW",
       "🛗 ELEVATOR",
       "🚂 ENGINE",
@@ -176,9 +179,9 @@ class _LettersModuleState extends State<LettersModule> {
       "✏️ ERASER",
       "🚪 EXIT",
       "👁️ EYE",
-      "👓 EYEGLASSES",
+      "🍰 ECLAIR",
       "🔊 ECHO",
-      "🧪 EXPERIMENT",
+      "🌬️ EXHALE",
       "🤸 EXERCISE",
       "⚡ ENERGY"
     ],
@@ -189,7 +192,7 @@ class _LettersModuleState extends State<LettersModule> {
       "🐟 FISH",
       "🚩 FLAG",
       "🦩 FLAMINGO",
-      "🔦 FLASHLIGHT",
+      "🍟 FRIES",
       "🌸 FLOWER",
       "🏈 FOOTBALL",
       "🍴 FORK",
@@ -222,13 +225,12 @@ class _LettersModuleState extends State<LettersModule> {
       "👺 GOBLIN",
       "🍬 GUMBALL",
       "🥽 GOGGLES",
-      "🍪 GINGERBREAD",
+      "🧤 GLOVES",
       "🌋 GEYSER",
       "😆 GIGGLE",
       "🧞 GENIE",
       "👗 GOWN"
     ],
-
     "Hh": [
       "🎩 Hat",
       "🐴 Horse",
@@ -252,7 +254,6 @@ class _LettersModuleState extends State<LettersModule> {
       "🎺 Horn",
       "⛰️ Hill"
     ],
-
     "Ii": [
       "🧊 ICE",
       "🍦 ICE CREAM",
@@ -260,7 +261,7 @@ class _LettersModuleState extends State<LettersModule> {
       "🖋️ INK",
       "⚙️ IRON",
       "💡 IDEA",
-      "🎸 INSTRUMENT",
+      "📸 IMAGE",
       "📩 INVITATION",
       "⛸️ ICE SKATES",
       "🦎 IGUANA",
@@ -272,9 +273,9 @@ class _LettersModuleState extends State<LettersModule> {
       "🐛 INCHWORM",
       "🌿 IVY",
       "🔮 ILLUSION",
-      "🏠 IGLOO",
-      "🔍 INVESTIGATION",
-      "📚 INFORMATION"
+      "❄️ IGLOO",
+      "🍼 INFANT",
+      "🟦 INDIGO"
     ],
     "Jj": [
       "🍓 JAM",
@@ -295,7 +296,7 @@ class _LettersModuleState extends State<LettersModule> {
       "😊 JOLLY",
       "🤹‍♂️ JESTER",
       "🔔 JINGLE",
-      "🔨 JACKHAMMER",
+      "🏢 JAIL",
       "🦖 JURASSIC",
       "🎰 JACKPOT"
     ],
@@ -310,7 +311,7 @@ class _LettersModuleState extends State<LettersModule> {
       "😊 KIND",
       "🔪 KNIFE",
       "⌨️ KEYBOARD",
-      "📚 KNOWLEDGE",
+      "🥝 KIWI",
       "🏰 KINGDOM",
       "🍅 KETCHUP",
       "🧒 KID",
@@ -352,21 +353,20 @@ class _LettersModuleState extends State<LettersModule> {
       "🥛 MILK",
       "🥭 MANGO",
       "🐭 MOUSE",
-      "🏍️ MOTORCYCLE",
+      "🏍️ MOTOR",
       "🧜‍♀️ MERMAID",
       "🎵 MUSIC",
       "🧲 MAGNET",
       "🗺️ MAP",
-      "🎤 MICROPHONE",
-      "🍄 MUSHROOM",
+      "🎤 MIC",
+      "👄 MOUTH",
       "📬 MAILBOX",
       "✨ MAGIC",
       "🏃 MARATHON",
       "🧁 MUFFIN",
       "🏅 MEDAL",
-      "🌿 MICROSCOPE",
-      "🔬 MICROSCOPE",
-      "🍡 MARSHMALLOW",
+      "🤱 MOTHER",
+      "💪 MUSCLE",
       "🌱 MINT",
     ],
     "Nn": [
@@ -383,11 +383,11 @@ class _LettersModuleState extends State<LettersModule> {
       "🧭 NORTH",
       "🥅 NET",
       "😴 NAP",
-      "📰 NEWSPAPER",
+      "👩‍⚕️ NURSE",
       "🍗 NUGGETS",
       "🔊 NOISE",
       "⚓ NAVY",
-      "👻 NIGHTMARE",
+      "🪺 NEST",
       "🪡 NEEDLE",
       "💅 NAIL",
       "👶 NEWBORN"
@@ -460,7 +460,6 @@ class _LettersModuleState extends State<LettersModule> {
       "📝 QUIZ",
       "🥤 QUENCH",
       "🏡 QUAINT",
-      "💎 QUARTZ"
     ],
     "Rr": [
       "🌈 RAINBOW",
@@ -478,7 +477,7 @@ class _LettersModuleState extends State<LettersModule> {
       "🦌 REINDEER",
       "🚣 RAFT",
       "⏹️ RECTANGLE",
-      "🫐 RASPBERRY",
+      "🚆 RAIL",
       "🪨 ROCK",
       "🏎️ RACECAR",
       "🧥 RAINCOAT",
@@ -492,21 +491,21 @@ class _LettersModuleState extends State<LettersModule> {
       "🥪 SANDWICH",
       "⛄ SNOWMAN",
       "⚽ SOCCER",
-      "🍓 STRAWBERRY",
+      "🥤 STRAW",
       "🏫 SCHOOL",
       "🦈 SHARK",
       "🧦 SOCKS",
       "🐌 SNAIL",
-      "🕶️ SUNGLASSES",
+      "✂️ SCISSORS",
       "🧳 SUITCASE",
       "🛝 SLIDE",
       "🎅 SANTA",
       "🦭 SEAL",
       "🐚 SHELL",
-      "🦸‍♂️ SUPERHERO",
+      "🦸‍♂️ SUPERMAN",
       "🐿️ SQUIRREL",
       "🥄 SPOON",
-      "🏰 SANDCASTLE"
+      "👕 SHIRT"
     ],
     "Tt": [
       "🐅 TIGER",
@@ -514,14 +513,14 @@ class _LettersModuleState extends State<LettersModule> {
       "🌳 TREE",
       "🚂 TRAIN",
       "🚛 TRUCK",
-      "🧸 TEDDY BEAR",
+      "🧸 TEDDY",
       "🍅 TOMATO",
-      "🪥 TOOTHBRUSH",
+      "🦷 TOOTH",
       "🌮 TACO",
-      "🪑 TABLE",
+      "🔺 TRIANGLE",
       "🔭 TELESCOPE",
       "🎾 TENNIS",
-      "🥁 TAMBOURINE",
+      "👩‍🏫 TEACHER",
       "🚕 TAXI",
       "🌪️ TORNADO",
       "🌷 TULIP",
@@ -543,24 +542,24 @@ class _LettersModuleState extends State<LettersModule> {
       "⬆️ UP",
       "🍴 UTENSIL",
       "🪐 URANUS",
-      "🌊 UNDERWATER",
+      "⬇️ UNDER",
       "🔌 UNPLUG",
       "🥇 ULTIMATE",
       "↩️ U-TURN",
       "📈 UPGRADE",
       "🔓 UNLOCK",
-      "🕵️‍♂️ UNDERCOVER",
-      "🩲 UNDERWEAR",
+      "🏙️ URBAN",
+      "😠 UPSET",
       "🤝 UNITY",
       "🧔🏻 UNCLE",
       "💾 USB",
-      "🏫 UNIVERSITY",
+      "🤝 UNITY",
       "🛸 UFO"
     ],
     "Vv": [
       "🦸 VIGILANTE",
       "🌪️ VORTEX",
-      "⌚ WATCH",
+      "🗣️ VOICE",
       "👁️ VISION",
       "🌋 VOLCANO",
       "🧛 VAMPIRE",
@@ -569,7 +568,7 @@ class _LettersModuleState extends State<LettersModule> {
       "🏆 VICTORY",
       "🥦 VEGETABLE",
       "🟣 VIOLET",
-      "🏐 VOLLEYBALL",
+      "🚗 VEHICLES",
       "🏖️ VACATION",
       "🚐 VAN",
       "🎬 VIDEO",
@@ -601,28 +600,17 @@ class _LettersModuleState extends State<LettersModule> {
       "🦣 WOOLLY",
       "😔 WISTFUL",
       "🥄 WHISK",
+      "🛠️ WORK"
     ],
     "Xx": [
       "🦴 X-RAY",
-      "🎵 XYLOPHONE",
-      "🐟 X-RAY FISH",
+      "📟 XRAY",
       "🖨️ XEROX",
       "💡 XENON",
-      "🍬 XYLITOL",
-      "🎄 XMAS",
-      "🤗 XENIAL",
-      "🔦 XENON LIGHT",
-      "🎶 XYLOPHONIST",
-      "🚫 XENOPHOBIA",
-      "🐠 XIPHIAS",
-      "🌵 XERIC",
-      "🧬 XENOGENESIS",
-      "⭐ X-FACTOR",
-      "🤖 XENOBOT",
-      "🌸 XENODOCHIAL",
-      "🏛️ XERANTHEMUM",
-      "💕 XOXO",
-      "🍉 XIGUA",
+      "🦴 X-ray",
+      "🎵 Xylophone",
+      "🎄 Xmas",
+      "🍉 Xigua"
     ],
     "Yy": [
       "🐂 Yak",
@@ -643,31 +631,28 @@ class _LettersModuleState extends State<LettersModule> {
       "🧘 Yoga",
       "🐾 Yeti",
       "🔥 Yule Log",
-      "🐶 Yip",
-      "⚠️ Yield"
     ],
     "Zz": [
-      "Zebra 🦓",
-      "Zoo",
-      "Zoom",
-      "Zipper",
-      "Zucchini 🥒",
-      "Zap ⚡",
-      "Zebra",
-      "Zigzag",
-      "Zest",
-      "Zebrafish",
-      "Zodiac ♌",
-      "Zookeeper 👨‍🌾",
-      "Zombie 🧟",
-      "Zumba 💃",
-      "Zillion 💰",
-      "Zen ☯️",
-      "Zestful 😊",
-      "Zipline",
-      "Zucchini Bread 🍞",
-      "Zero 0",
-      "Zone 🚷",
+      "🦓 Zebra",
+      "🏞️ Zoo",
+      "🔍 Zoom",
+      "🎒 Zipper",
+      "🥒 Zucchini",
+      "⚡ Zap",
+      "🦓 Zebra",
+      "〰️ Zigzag",
+      "🍋 Zest",
+      "🐟 Zebrafish",
+      "♌ Zodiac",
+      "👨‍🌾 Zookeeper",
+      "🧟 Zombie",
+      "💃 Zumba",
+      "💰 Zillion",
+      "☯️ Zen",
+      "😊 Zestful",
+      "🎢 Zipline",
+      "0️⃣ Zero",
+      "🚷 Zone",
     ]
 
     // Add more entries for other letters
@@ -739,7 +724,12 @@ class _LettersModuleState extends State<LettersModule> {
                           width: screenwidth,
                           child: InkWell(
                             onTap: () {
-                              print("Home Button Pressed!");
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        HomeModule()), // Navigate to HomeModule
+                              );
                             },
                             child: Image.asset(
                               "assets/modules/letters/homebtn.png",
@@ -757,7 +747,7 @@ class _LettersModuleState extends State<LettersModule> {
                               "LETTERS",
                               style: TextStyle(
                                 fontFamily: "IrishGrover",
-                                fontSize: screenheight * 0.15,
+                                fontSize: screenheight * 0.12,
                                 color: Color.fromRGBO(228, 159, 255, 1),
                                 shadows: [
                                   Shadow(
@@ -776,9 +766,7 @@ class _LettersModuleState extends State<LettersModule> {
                         child: Container(
                           width: screenwidth,
                           child: InkWell(
-                            onTap: () {
-                              print("Settings Button Pressed!");
-                            },
+                            onTap: () => showSettingsPopup(context),
                             child: Image.asset(
                               "assets/modules/letters/settingbtn.png",
                               fit: BoxFit.contain,
@@ -846,7 +834,7 @@ class _LettersModuleState extends State<LettersModule> {
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
                                                 fontFamily: "Inter",
-                                                fontSize: screenheight * 0.4,
+                                                fontSize: screenheight * 0.35,
                                                 color: Colors.white,
                                                 shadows: [
                                                   Shadow(
@@ -1032,5 +1020,31 @@ Widget _words(BuildContext context, emo, word) {
         ),
       ),
     ),
+  );
+}
+
+void showSettingsPopup(BuildContext context) {
+  double screenWidth = MediaQuery.of(context).size.width;
+  double screenHeight = MediaQuery.of(context).size.height;
+
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return Dialog(
+        insetPadding: EdgeInsets.zero, // Removes default padding
+        backgroundColor: Colors.transparent, // Makes the background transparent
+        child: Container(
+          width: screenWidth * .5, // Full width
+          height: screenHeight * .8, // Full height
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/mainModule/settingPop.png"),
+              fit: BoxFit.contain,
+            ),
+          ),
+          child: Text(""),
+        ),
+      );
+    },
   );
 }
