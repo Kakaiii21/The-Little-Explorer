@@ -64,6 +64,9 @@ flutter:
      - assets/HomeModule/logo.png
      - assets/mainModule/
      - assets/modules/letters/
+     - assets/modules/shapes/
+     - assets/modules/shapes/sounds/
+
      - assets/sounds/
 
   # An image asset can refer to one or more resolution-specific "variants", see

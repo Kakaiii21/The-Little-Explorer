@@ -721,6 +721,11 @@ class _LettersModuleState extends State<LettersModule> {
                       Expanded(
                         flex: 1,
                         child: Container(
+                          padding: EdgeInsets.fromLTRB(
+                              screenwidth * .01,
+                              screenheight * .02,
+                              screenwidth * .01,
+                              screenheight * .02),
                           width: screenwidth,
                           child: InkWell(
                             onTap: () {
@@ -764,6 +769,11 @@ class _LettersModuleState extends State<LettersModule> {
                       Expanded(
                         flex: 1,
                         child: Container(
+                          padding: EdgeInsets.fromLTRB(
+                              screenwidth * .01,
+                              screenheight * .02,
+                              screenwidth * .01,
+                              screenheight * .02),
                           width: screenwidth,
                           child: InkWell(
                             onTap: () => showSettingsPopup(context),
