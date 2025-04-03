@@ -66,6 +66,11 @@ flutter:
      - assets/modules/letters/
      - assets/modules/shapes/
      - assets/modules/shapes/sounds/
+     - assets/modules/numbers/hands/
+     - assets/modules/numbers/number/
+     - assets/modules/numbers/sounds/
+
+
 
      - assets/sounds/
 
@@ -91,6 +96,10 @@ flutter:
      - family: Inter
        fonts:
          - asset: assets/fonts/Inter_24pt-Bold.ttf
+
+     - family: GolosText
+       fonts:
+         - asset: assets/fonts/GolosText-Bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

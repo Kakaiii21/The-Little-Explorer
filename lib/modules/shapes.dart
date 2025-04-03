@@ -275,7 +275,7 @@ class _ShapesModuleState extends State<ShapesModule> {
                                                       selectedShape,
                                                       style: TextStyle(
                                                         fontSize:
-                                                            screenheight * 0.1,
+                                                            screenheight * 0.07,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                         color: Colors.white,
@@ -419,8 +419,7 @@ class _ShapesModuleState extends State<ShapesModule> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(shapeImage, height: screenheight * 0.2),
-            SizedBox(height: 4),
+            Image.asset(shapeImage, height: screenheight * 0.15),
             Text(
               shapeName,
               textAlign: TextAlign.center,

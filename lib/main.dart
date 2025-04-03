@@ -7,8 +7,14 @@ import 'package:littleexplorer/modules/shapes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Hide the status bar
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+
+  // Lock the orientation to landscape
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
+
   runApp(const MyApp());
 }
 
