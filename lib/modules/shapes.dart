@@ -424,7 +424,7 @@ class _ShapesModuleState extends State<ShapesModule> {
               shapeName,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: screenheight * 0.045,
+                fontSize: screenheight * 0.039,
                 fontFamily: "BebasNeue",
                 color: isSelected
                     ? Colors.white
